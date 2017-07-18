@@ -16,6 +16,9 @@
             body {
                 background-image: url("bg.jpg")
             }
+            .error {
+                color: slategrey
+            }
         </style>
     </head>
     <body>
@@ -30,7 +33,7 @@
                         <td>Patient ID</td>
                         <td> 
                             <input type="text" name="txtId" value="${requestScope.PATIENTINFO.id}" required/> 
-                            ${requestScope.ERROR.idError}
+                            <span class="error">${requestScope.ERROR.idError}</span>
                         </td>
                     </tr>
                 </thead>
@@ -39,7 +42,7 @@
                         <td>Patient Name</td>
                         <td> 
                             <input type="text" name="txtName" value="${requestScope.PATIENTINFO.name}" required/> 
-                            ${requestScope.ERROR.nameError}
+                            <span class="error">${requestScope.ERROR.nameError}</span> 
                         </td>
                     </tr>
                     <tr>
@@ -53,7 +56,7 @@
                         <td>DOB</td>
                         <td> 
                             <input type="date" name="txtDob" value="${requestScope.PATIENTINFO.date}" required=""/> 
-                        ${requestScope.ERROR.dobError}
+                        <span class="error">${requestScope.ERROR.dobError} </span>
                         </td>
                     </tr>
                     <tr>
@@ -70,7 +73,6 @@
                         <td>Phone</td>
                         <td> 
                             <input type="number" name="txtPhone" value="${requestScope.PATIENTINFO.phone}" required minlength="10" maxlength="11"/> 
-                            ${requestScope.ERROR.phoneError}
                         </td>
                     </tr>
                     <tr>
@@ -83,7 +85,8 @@
                             <input type="checkbox" name="ckStatus" value="HIV" <c:if test="${requestScope.STATUS.contains('HIV')}"> checked="" </c:if>> HIV
                             <input type="checkbox" name="ckStatus" value="CANCER" <c:if test="${requestScope.STATUS.contains('CANCER')}"> checked=""</c:if> /> CANCER
                             <input type="checkbox" name="ckStatus" value="PREGNANT" <c:if test="${requestScope.STATUS.contains('PREGNANT')}">checked=""</c:if>/> PREGNANT
-                            <br>${requestScope.ERROR.statusError}
+                            <br>
+                            <span class="error">${requestScope.ERROR.statusError}</span>
                         </td>
                     </tr>
                     <tr>

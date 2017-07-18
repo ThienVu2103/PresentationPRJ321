@@ -24,13 +24,13 @@
                 <thead>
                     <tr>
                         <td>Username</td>
-                        <td><input type="text" name="txtUsername" value="${STUSER}" required=""/> ${ERROR.usernameError}</td>
+                        <td><input type="text" name="txtUsername" value="${STUSER}" required="" maxlength="15" /> ${ERROR.usernameError}</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Password</td>
-                        <td><input type="password" name="txtPassword" required="" /> ${ERROR.passwordError}</td>
+                        <td><input type="password" name="txtPassword" required="" maxlength="30" /> ${ERROR.passwordError}</td>
                     </tr>
                     <tr>
                         <td><input type="submit" name="action" value="Login" ></td>

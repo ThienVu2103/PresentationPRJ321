@@ -26,7 +26,7 @@
                     <tr>
                         <td>Patient Name</td>
                         <td> 
-                            <input type="search" name="txtSearch" required=""/> 
+                            <input type="search" name="txtSearch" required="" maxlength="30"  /> 
                             <input type="hidden" name="txtNameEmp" value="${sessionScope.USER}"/>
                         </td>
                     </tr>

@@ -26,7 +26,8 @@
                     <tr>
                         <td>Surgery ID</td>
                         <td>
-                            <input type="text" name="txtSurgeryId" value="${requestScope.SURGERYINFO.surgeryId}" required=""/> 
+                            <input type="text" name="txtSurgeryId" value="${requestScope.SURGERYINFO.surgeryId}"
+                                   required="" maxlength="15"/> 
                             ${requestScope.ERROR.surgeryIdError}
                         </td>
                     </tr>
@@ -41,7 +42,8 @@
                     <tr>
                         <td>Time of start</td>
                         <td>
-                            <input type="datetime-local" name="txtTimeStart" value="${requestScope.SURGERYINFO.timeStart}" required=""/> 
+                            <input type="datetime-local" name="txtTimeStart" value="${requestScope.SURGERYINFO.timeStart}"
+                                   required="" /> 
                         ${requestScope.ERROR.timeStartError}
                         </td>
                     </tr>
